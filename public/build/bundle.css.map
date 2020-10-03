@@ -1,8 +1,18 @@
 {
   "version": 3,
   "file": "bundle.css",
-  "sources": [],
-  "sourcesContent": [],
+  "sources": [
+    "App.svelte",
+    "HowTo.svelte",
+    "ProgressBar.svelte",
+    "Timer.svelte"
+  ],
+  "sourcesContent": [
+    "<script>\n  import HowTo from \"./HowTo.svelte\";\n  import Timer from \"./Timer.svelte\";\n</script>\n\n<style>\n  h1, h3 {\n    text-align: center;\n  }\n</style>\n\n<h1>Handwashing App</h1>\n<Timer />\n<HowTo />\n\n<h3>\n<a href=\"http://www.who.int/gpsc/clean_hands_protection/en/\">Picture Source</a>\n<a href=\"http://freesound.org/people/metrostock00/sounds/345086/\">Sound Source</a>\n</h3>\n",
+    "<style>\n  img {\n    max-width: 100%;\n  }\n</style>\n<div bp=\"grid\">\n<img bp=\"offset-5@md 4@md 12@sm\" src=\"handwashing.gif\" alt=\"How to wash your hands\"></div>\n",
+    "<style>\n  .progress-container {\n    margin: 20px 0;\n    border: solid rgba(194,194,194) 1px;\n  }\n  .progress-bar {\n    height: 30px;\n    background-color: rgba(77,199,55);\n  }\n</style>\n\n<div bp=\"grid\">\n  <div bp=\"offset-5@md 4@md 12@sm\" class=\"progress-container\">\n    <div class=\"progress-bar\" style=\"width: 20%;\">\n      <span class=\"sr-only\">%</span>\n    </div>\n  </div>\n</div>\n",
+    "<script>\n  import ProgressBar from \"./ProgressBar.svelte\";\n</script>\n\n<style>\nh2 {\n  margin: 0;\n}\n.start {\n  background-color: rgb(154,73,73);\n  width: 100%;\n  margin: 10px 0;\n}\n</style>\n\n<div bp=\"grid\">\n  <h2 bp=\"offset-5@md 4@md 12@sm\">Seconds left:</h2>\n</div>\n\n<ProgressBar />\n\n<button class=\"start\">Start</button>\n"
+  ],
   "names": [],
-  "mappings": ""
+  "mappings": "AAME,gBAAE,CAAE,EAAE,cAAC,CAAC,AACN,UAAU,CAAE,MAAM,AACpB,CAAC;ACPD,GAAG,eAAC,CAAC,AACH,SAAS,CAAE,IAAI,AACjB,CAAC;ACFD,mBAAmB,eAAC,CAAC,AACnB,MAAM,CAAE,IAAI,CAAC,CAAC,CACd,MAAM,CAAE,KAAK,CAAC,KAAK,GAAG,CAAC,GAAG,CAAC,GAAG,CAAC,CAAC,GAAG,AACrC,CAAC,AACD,aAAa,eAAC,CAAC,AACb,MAAM,CAAE,IAAI,CACZ,gBAAgB,CAAE,KAAK,EAAE,CAAC,GAAG,CAAC,EAAE,CAAC,AACnC,CAAC;ACHH,EAAE,cAAC,CAAC,AACF,MAAM,CAAE,CAAC,AACX,CAAC,AACD,MAAM,cAAC,CAAC,AACN,gBAAgB,CAAE,IAAI,GAAG,CAAC,EAAE,CAAC,EAAE,CAAC,CAChC,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,IAAI,CAAC,CAAC,AAChB,CAAC"
 }
